@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 11:44:14 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/03 10:13:56 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:47:20 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	printstring(t_printf *j, char *str)
 
 	str = (str == NULL) ? "(null)" : str;
 	len = ft_strlen(str);
+	j->precision = (j->precision < 0) ? len : j->precision;
 	len -= (j->precision != 0 && j->precision < len) ? (len - j->precision) : 0;
 	len -= (j->precision == 0 && j->dot == '.' && j->width == 0) ? len : 0;
 	len -= (j->precision == 0 && j->dot == '.' && j->width > 0
