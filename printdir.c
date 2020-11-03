@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:22:14 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/02 13:02:41 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:15:23 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void		printdir(t_printf *j, size_t dp)
 {
 	int		space;
 	int		zero;
-	size_t	len;
+	int		len;
 
 	len = hxlen(dp) + 2;
 	j->precision = (j->precision < 0) ? len : j->precision;

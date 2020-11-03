@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:02:01 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/02 12:46:43 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:14:43 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void		printhexu(t_printf *j, size_t x)
 {
 	int		space;
 	int		zero;
-	size_t	len;
+	int		len;
 
 	len = hxlen(x);
 	j->precision = (j->precision < 0) ? len : j->precision;

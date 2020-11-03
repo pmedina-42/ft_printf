@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 11:44:14 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/10/31 14:02:05 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:13:56 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	printstring(t_printf *j, char *str)
 {
 	int		space;
 	int		zero;
-	size_t	len;
+	int		len;
 
 	str = (str == NULL) ? "(null)" : str;
 	len = ft_strlen(str);

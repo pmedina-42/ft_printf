@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 13:31:45 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/02 12:47:44 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:13:15 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	printuns(t_printf *j, unsigned int num)
 {
 	int			space;
 	int			zero;
-	size_t		len;
+	int			len;
 
 	len = intlen(num);
 	j->precision = (j->precision < 0) ? len : j->precision;

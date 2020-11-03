@@ -8,7 +8,7 @@ RM		= rm -f
 CFLAGS	= -Wall -Werror -Wextra
 
 .c.o:
-		${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME): ${OBJS}
 		make -sC ./libft/

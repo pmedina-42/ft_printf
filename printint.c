@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 12:26:06 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/02 12:50:29 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:16:15 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	printspaceback(t_printf *j, int space)
 
 static void	writeint(t_printf *j, int zero, int space, int num)
 {
-	size_t	len;
+	int		len;
 	int		signo;
 	char	*numstr;
 
@@ -58,7 +58,7 @@ void		printint(t_printf *j, int num)
 {
 	int		zero;
 	int		space;
-	size_t	len;
+	int		len;
 
 	len = intlen(num);
 	j->lenstr += len;
@@ -66,6 +66,7 @@ void		printint(t_printf *j, int num)
 	space = j->width - ((j->precision <= len) ? len : j->precision);
 	space -= (num < 0 && j->precision >= len) ? 1 : 0;
 	space += (num == 0 && j->precision == 0 && j->dot == '.') ? 1 : 0;
-	zero = (num < 0 && j->precision >= 0) ? (j->precision - len + 1) : (j->precision - len);
+	zero = (num < 0 && j->precision >= 0) ? (j->precision - len + 1)
+		: (j->precision - len);
 	writeint(j, zero, space, num);
 }
