@@ -62,7 +62,8 @@ void		printint(t_printf *j, int num)
 
 	len = intlen(num);
 	j->lenstr += len;
-	j->precision = (j->precision < 0) ? 0 : j->precision;
+	j->width = (j->precision == -1) ? len : j->width;
+	j->precision = (j->precision == -1) ? len : j->precision;
 	space = j->width - ((j->precision <= len) ? len : j->precision);
 	space -= (num < 0 && j->precision >= len) ? 1 : 0;
 	space += (num == 0 && j->precision == 0 && j->dot == '.') ? 1 : 0;
