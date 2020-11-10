@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 
-static void	transformhxmin(size_t x)
+static void	transformhxmin(unsigned long x)
 {
 	char	c;
 
@@ -32,7 +32,7 @@ static void	printspaceback(t_printf *j, int space)
 	}
 }
 
-void		printdir(t_printf *j, size_t dp)
+void		printdir(t_printf *j, unsigned long dp)
 {
 	int		space;
 	int		zero;

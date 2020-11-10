@@ -6,13 +6,13 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:02:01 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/03 10:14:43 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/10 13:56:15 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static void	transformhxmay(size_t x)
+static void	transformhxmay(unsigned long x)
 {
 	char	c;
 
@@ -23,7 +23,7 @@ static void	transformhxmay(size_t x)
 	write(1, &c, 1);
 }
 
-void		printhexu(t_printf *j, size_t x)
+void		printhexu(t_printf *j, unsigned long x)
 {
 	int		space;
 	int		zero;
@@ -39,7 +39,7 @@ void		printhexu(t_printf *j, size_t x)
 						j->precision >= 0) ? " " : "0"), 1);
 	while (zero-- > 0)
 		j->lenstr += write(1, "0", 1);
-	(j->precision == 0 && (char *)x == NULL && j->dot == '.')
+	(j->precision == 0 && x == 0 && j->dot == '.')
 		? 0 : transformhxmay(x);
 	j->lenstr += len;
 	if (j->tab == '-')

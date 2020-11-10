@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 14:12:10 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/10/31 14:16:13 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/10 13:53:04 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ void	guesstype(t_printf *j)
 	if (*j->str == 'u')
 		printuns(j, va_arg(j->args, unsigned int));
 	if (*j->str == 'x')
-		printhx(j, va_arg(j->args, size_t));
+		printhx(j, va_arg(j->args, unsigned long));
 	if (*j->str == 'X')
-		printhexu(j, va_arg(j->args, size_t));
+		printhexu(j, va_arg(j->args, unsigned long));
 	if (*j->str == 'p')
-		printdir(j, va_arg(j->args, size_t));
+		printdir(j, va_arg(j->args, unsigned long));
 	if (*j->str == '%')
 		printchar(j, '%');
 }
