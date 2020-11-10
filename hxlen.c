@@ -6,15 +6,15 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 13:54:02 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/10 14:35:08 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/10 14:44:35 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	hxlen(unsigned long nb)
+int		hxlen(unsigned long nb)
 {
-	size_t	count;
+	int	count;
 
 	count = 0;
 	while (nb >= 16)
