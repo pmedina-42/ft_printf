@@ -6,13 +6,13 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 13:54:02 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/10/28 14:04:45 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/10 14:35:08 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	hxlen(size_t nb)
+int	hxlen(unsigned long nb)
 {
 	size_t	count;
 

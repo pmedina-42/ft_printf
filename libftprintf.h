@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 14:16:23 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/10 13:53:31 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/10 14:35:29 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ size_t			intlen(long num);
 void			printhx(t_printf *j, unsigned long x);
 void			printhexu(t_printf *j, unsigned long x);
 void			printdir(t_printf *j, unsigned long dp);
-size_t			hxlen(size_t nb);
+int				hxlen(unsigned long nb);
 
 #endif
