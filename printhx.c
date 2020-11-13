@@ -6,13 +6,13 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:59:42 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/10 13:55:40 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/13 12:51:08 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static void	transformhxmin(unsigned long x)
+static void	transformhxmin(unsigned int x)
 {
 	char	c;
 
@@ -23,7 +23,7 @@ static void	transformhxmin(unsigned long x)
 	write(1, &c, 1);
 }
 
-void		printhx(t_printf *j, unsigned long x)
+void		printhx(t_printf *j, unsigned int x)
 {
 	int		space;
 	int		zero;

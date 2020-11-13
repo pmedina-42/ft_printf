@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:22:14 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/03 10:15:23 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/13 13:09:59 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		printdir(t_printf *j, unsigned long dp)
 	write(1, "0x", 2);
 	while (zero-- > 0)
 		j->lenstr += write(1, "0", 1);
-	(j->precision == 0 && (char *)dp == NULL && j->dot == '.')
+	(j->precision == 0 && dp == 0 && j->dot == '.')
 		? 0 : transformhxmin(dp);
 	j->lenstr += len;
 	printspaceback(j, space);

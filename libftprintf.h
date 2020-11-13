@@ -6,7 +6,7 @@
 /*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 14:16:23 by pmedina-          #+#    #+#             */
-/*   Updated: 2020/11/10 14:35:29 by pmedina-         ###   ########.fr       */
+/*   Updated: 2020/11/13 13:10:28 by pmedina-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void			printstring(t_printf *j, char *str);
 void			printint(t_printf *j, int num);
 void			printuns(t_printf *j, unsigned int num);
 size_t			intlen(long num);
-void			printhx(t_printf *j, unsigned long x);
-void			printhexu(t_printf *j, unsigned long x);
+void			printhx(t_printf *j, unsigned int x);
+void			printhexu(t_printf *j, unsigned int x);
 void			printdir(t_printf *j, unsigned long dp);
 int				hxlen(unsigned long nb);
 
