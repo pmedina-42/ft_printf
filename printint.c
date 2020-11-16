@@ -52,6 +52,7 @@ static void	writeint(t_printf *j, int zero, int space, int num)
 	printspaceback(j, space);
 	if (num == 0 && j->precision == 0 && j->dot == '.' && j->width >= 0)
 		j->lenstr--;
+		free((num >= 0) ? (numstr) : (--numstr));
 }
 
 void		printint(t_printf *j, int num)

@@ -60,6 +60,5 @@ char				*ft_itoa(int n)
 		nu = nu / 10;
 		len--;
 	}
-	free(s);
 	return (s);
 }
